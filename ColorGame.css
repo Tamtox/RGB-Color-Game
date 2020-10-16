@@ -1,0 +1,250 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+}
+header{
+height: 7%;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 2.7rem;
+}
+main{
+height: 86%;
+background-color: whitesmoke;
+}
+#display{
+    margin: auto;
+    height: 10%;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius:3%;
+    font-size: 2rem;
+}
+#display div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80%;
+    width: 100%;
+    border: black solid 1px;
+    text-align: center;
+    border-radius: 2%;
+}
+#controls{
+    margin: auto;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2rem;
+}
+.control-box{
+    height: 80%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#reset{
+    border-radius: 5%;
+    transition: 0.5s;
+}
+#score{
+    border: black solid 1px;
+    border-radius:2% ;
+}
+.difficulty-selection{
+    flex-grow: 1;
+    border-radius: 10%;
+    transition: 0.5s;
+}
+#game{
+    height: 80%;
+    background: linear-gradient(135deg, rgba(255,0,0,1) 0%, rgba(31,210,30,1) 50%, rgba(27,0,255,1) 100%);
+    opacity: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#board {
+    background-color: rgb(255, 255, 255);
+    height: 90%;
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(3,33%);
+    justify-content: center;
+    align-items: center;
+    border-radius: 3%;
+    box-shadow:0px 0px 25px 0px rgb(0, 0, 0);
+}
+#start{
+    justify-self: center;
+    height: 20%;
+    width: 30%;
+    font-size: 3rem;
+    transition: 0.5s;
+    border-radius: 3%;
+}
+#start:hover,.difficulty-selection:hover,#reset:hover,.cell:hover,.cell-easy:hover,.cell-hard:hover{
+    transform: scale(1.05);
+    box-shadow:0px 0px 10px 0px rgb(0, 0, 0,0.5 );
+}
+.cell-easy{
+    height: 30%;
+    width: 50%;
+    transition: 0.5s;
+    border-radius: 10%;
+    background-color: rgb(0, 0, 0);
+    justify-self: center;
+}
+.cell-hard{
+    height: 70%;
+    width: 40%;
+    transition: 0.5s;
+    border-radius: 10%;
+    background-color: rgb(0, 0, 0);
+    justify-self: center;
+}
+.cell {
+    height: 50%;
+    width: 40%;
+    transition: 0.5s;
+    border-radius: 10%;
+    background-color: rgb(0, 0, 0);
+    justify-self: center;
+}
+footer{
+height: 7%;
+border: black solid 1px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 2.7rem;
+box-shadow:0px 0px 20px 0px rgb(0, 0, 0);
+}
+@media only screen and (min-width: 320px) and (max-width: 600px) {
+    html{
+        font-size: 50%;
+    }
+    #display{
+        width: 80%;
+    }
+    #controls{
+        flex-direction: column;
+        height: 20%;
+    }
+    .control-box{
+        flex-grow: 1;
+        height: 30%;
+        width: 80%;
+        margin: auto;
+    }
+    #game{
+        height:70%;
+    }
+    .cell-easy {
+        height: 15%;
+        width: 90%;
+    }
+    .cell-hard {
+        height: 35%;
+        width: 50%;
+    }
+    .cell {
+        height: 30%;
+        width: 70%;
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    html{
+        font-size: 60%;
+    }
+    #display{
+        width: 80%;
+    }
+    #controls{
+        flex-direction: column;
+        height: 20%;
+    }
+    .control-box{
+        flex-grow: 1;
+        height: 30%;
+        width: 80%;
+        margin: auto;
+    }
+    #game{
+        height:70%;
+    }
+    .cell-easy {
+        height: 20%;
+        width: 60%;
+    }
+    .cell-hard {
+        height: 40%;
+        width: 60%;
+    }
+    .cell {
+        height: 30%;
+        width: 60%;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    html{
+        font-size: 70%;
+    }
+    #display{
+        width: 80%;
+    }
+    #controls{
+        flex-direction: column;
+        height: 20%;
+    }
+    .control-box{
+        flex-grow: 1;
+        height: 30%;
+        width: 80%;
+        margin: auto;
+    }
+    #game{
+        height:70%;
+    }
+    .cell-easy {
+        height: 20%;
+        width: 60%;
+    }
+    .cell-hard {
+        height: 50%;
+        width: 50%;
+    }
+    .cell {
+        height: 40%;
+        width: 55%;
+}
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    html{
+        font-size: 85%;
+    }
+    .cell-easy {
+        height: 40%;
+        width: 40%;
+    }
+    .cell-hard {
+        height: 40%;
+        width: 40%;
+    }
+    .cell {
+        height: 30%;
+        width: 50%;
+    }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1600px) {
+    html{
+        font-size: 100%;
+    }
+}
